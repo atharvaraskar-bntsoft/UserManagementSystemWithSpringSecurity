@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "5ee4f47f-f1d6-460d-b5d7-a1e9c5f18df4",
+		"name": "SecurityTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35103354",
+		"_collection_link": "https://bnt-soft-8585.postman.co/workspace/New-Team-Workspace~479d2cca-9dd5-4aff-b7f4-99d7eaec63b5/collection/35103354-5ee4f47f-f1d6-460d-b5d7-a1e9c5f18df4?action=share&source=collection_link&creator=35103354"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"johndoe\",\r\n    \"password\": \"password123\",\r\n    \"email\": \"johndoe@example.com\",\r\n     \"roles\": [\r\n        {\r\n            \"name\":\"ADMIN\"\r\n        }\r\n        ]\r\n            \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usermanagementapi/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usermanagementapi",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n     \"userName\":\"atharva\",\r\n     \"password\":\"atharva12\",\r\n     \"email\":\"atharva20@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usermanagementapi/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usermanagementapi",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzM0MzQ0MDcwLCJleHAiOjE3MzQzNDQxNzh9.RGGwqW5KTUTE2W4H3R8TERG_VHLm1tRzRs2RViggueA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usermanagementapi/users/admi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usermanagementapi",
+						"users",
+						"admi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzM0MzU3MjUyLCJleHAiOjE3MzQzNTczNjB9.Hx6Cacexu6R2bmUsXOquwdAk9BgxChh6yeehhBisYv0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usermanagementapi/users/admi/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usermanagementapi",
+						"users",
+						"admi",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUsers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"johndoe\",\r\n    \"password\": \"password123\",\r\n    \"email\": \"johndoe@example.com\",\r\n     \"roles\": [\r\n        {\r\n            \"name\":\"ADMIN\"\r\n        }\r\n        ]\r\n            \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usermanagementapi/users/admi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usermanagementapi",
+						"users",
+						"admi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
