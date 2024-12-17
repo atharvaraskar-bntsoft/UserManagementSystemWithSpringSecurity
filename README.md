@@ -83,25 +83,24 @@ This project is a User Management System implemented using Spring Boot and Sprin
 - **Description:** Allow users to update their details, such as email.
 - **Access:** User (only their own account)
 
-### **4e. Delete User API (Admin Only)**
+### **e. Delete User API (Admin Only)**
 - **Endpoint:** `DELETE /api/users/{id}`
 - **Description:** Allow admins to delete any user account by ID.
 - **Access:** Admin
 
 ---
 
-## JWT Token Authentication (Optional Advanced Task)
-This project uses JWT tokens to secure APIs with the following features:
-1. Token-based login for authentication.
-2. Role-based validation to restrict access to specific APIs.
-3. Spring Security’s JWT support for implementing secure APIs.
+### 5. Implement JWT Token Authentication (Optional Advanced Task)
+- Use Spring Security’s JWT support to secure APIs.
+- Include token-based login and role validation.
 
 ---
 
-## Expected Outcome
-- A fully functional User Management System secured with Spring Security.
-- APIs with proper authentication and authorization mechanisms.
-- Role-based access control with Admin and User roles.
+### Expected Outcome
+- A working User Management System secured with Spring Security.
+- APIs should be fully functional with proper authentication and authorization.
+- Demonstrate role-based restrictions with Admin and User roles.
+
 
 ---
 
