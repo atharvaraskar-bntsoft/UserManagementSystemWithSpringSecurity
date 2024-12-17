@@ -107,7 +107,7 @@ This project is a User Management System implemented using Spring Boot and Sprin
 ## Getting Started
 
 ### Prerequisites
-- Java 17+
+- Java 21
 - Spring Boot
 - Gradle
 - A database (e.g., MySQL, PostgreSQL)
