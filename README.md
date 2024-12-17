@@ -12,14 +12,16 @@ To test the APIs of this project, you can use the Postman collection provided be
    - Select the downloaded `.json` file.
 3. Test the APIs in Postman.
 
-
-
-
-
-
 # User Management System with Spring Security
 
 This project is a User Management System implemented using Spring Boot and Spring Security. It provides a secure, role-based system with APIs for user registration, login, and management.
+
+
+## Features
+- Secure user authentication with JWT tokens.
+- Role-based access control (Admin and User roles).
+- CRUD operations for user accounts.
+- APIs for login, user management, and role-based restrictions.
 
 ## Project Tasks
 
@@ -51,6 +53,7 @@ This project is a User Management System implemented using Spring Boot and Sprin
 - Configure Spring Security to allow role-based access to APIs.
 
 ### 4. Implement the Following APIs
+## API Endpoint
 
 #### a. User Registration API
 - **Endpoint**: `POST /api/register`
@@ -63,26 +66,54 @@ This project is a User Management System implemented using Spring Boot and Sprin
     "password": "password123",
     "email": "john@example.com"
   }
-b. Login API
-Endpoint: POST /api/login
-Description: Authenticate users and return a JWT token.
-Access: Public
-c. Get All Users API (Admin Only)
-Endpoint: GET /api/users
-Description: Retrieve a list of all registered users. Only accessible to users with the "ADMIN" role.
-Access: Admin
-d. Update User Details API
-Endpoint: PUT /api/users/{id}
-Description: Allow users to update their details, such as email.
-Access: User (only their own account)
-e. Delete User API (Admin Only)
-Endpoint: DELETE /api/users/{id}
-Description: Allow admins to delete any user account by ID.
-Access: Admin
-5. Implement JWT Token Authentication (Optional Advanced Task)
-Use Spring Security’s JWT support to secure APIs.
-Include token-based login and role validation.
-Expected Outcome
-A working User Management System secured with Spring Security.
-APIs should be fully functional with proper authentication and authorization.
-Demonstrate role-based restrictions with Admin and User roles.
+
+
+### **b. Login API**
+- **Endpoint:** `POST /api/login`
+- **Description:** Authenticate users and return a JWT token.
+- **Access:** Public
+
+### **c. Get All Users API (Admin Only)**
+- **Endpoint:** `GET /api/users`
+- **Description:** Retrieve a list of all registered users. Only accessible to users with the "ADMIN" role.
+- **Access:** Admin
+
+### **d. Update User Details API**
+- **Endpoint:** `PUT /api/users/{id}`
+- **Description:** Allow users to update their details, such as email.
+- **Access:** User (only their own account)
+
+### **4e. Delete User API (Admin Only)**
+- **Endpoint:** `DELETE /api/users/{id}`
+- **Description:** Allow admins to delete any user account by ID.
+- **Access:** Admin
+
+---
+
+## JWT Token Authentication (Optional Advanced Task)
+This project uses JWT tokens to secure APIs with the following features:
+1. Token-based login for authentication.
+2. Role-based validation to restrict access to specific APIs.
+3. Spring Security’s JWT support for implementing secure APIs.
+
+---
+
+## Expected Outcome
+- A fully functional User Management System secured with Spring Security.
+- APIs with proper authentication and authorization mechanisms.
+- Role-based access control with Admin and User roles.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Java 17+
+- Spring Boot
+- Gradle
+- A database (e.g., MySQL, PostgreSQL)
+
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/atharvaraskar-bntsoft/UserManagementSystemWithSpringSecurity.git
